@@ -4,11 +4,12 @@ function review(name, place) {
 
     this.name = name;
     this.place = place;
-    this.reviews.push(this);
+    this.description = description
+    reviews.push(this);
 
 }
 
-///////////function for the text area
+// ///////////function for the text area
 
 function getText() {
 
@@ -16,39 +17,41 @@ function getText() {
     let text = document.getElementsByTagName("textarea");
 
     for (let i = 0; i <= text.length - 1; i++) {
-        if (text[i].value != '')
+        if (text[i].value != '') {
             console.log(text[i].value);
+            description = text[i].value;
+        }
         else {
             alert('Enter some value.');
             text[i].focus();
             return false;
         }
     }
-
 }
 
-// getText();
-
-//////////function for format to appear
+// //////////function for format to appear
 
 review.prototype.render = function () {
 
     let parent = document.getElementById("reveiewShowSection");
-    let divElement = document.createElement('div');
-    parent.appendChild(divElement);
+    
 }
 
 ////////////////function for the event 
 
-let format = document.getElementById('adventureFormat')
 
-adventureFormat.addEventListener('sumbit', submitting)
+let forms = document.getElementById('adventureFormat')
+forms.addEventListener('submit', submitting);
 
 function submitting(event) {
     event.preventDefault();
-    let name=event.target.name.value;
-    let place=event.target.place.value;
+    console.log(event.target.name.value);
     getText();
-    let newReveiw = new review(name, place)
-    newReveiw.render();
+    let name = event.target.name.value;
+    let place = event.target.place.value
+    let addNewReview = new review(name, place)
+    addNewReview.render();
+    console.log(addNewReview);
+
 }
+

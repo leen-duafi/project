@@ -10,7 +10,18 @@
 
 <body>
     <header>
-        <a href='index2.html'>home</a></li>
+        <div class="nav-container">
+            <img src="img/logo.png" alt="logo img">
+            <nav class="main-nav">
+                <ul class="list">
+                    <li class="list-item"><a href="index.html">Home</a></li>
+                    <li class="list-item"><a href="pages/book_flight.html">Book Flight</a></li>
+                    <li class="list-item"><a href="pages/reservations.html">Reservations</a></li>
+                    <li class="list-item"><a href="pages/story.html">Story</a></li>
+                    <li class="list-item"><a href="pages/about_us.html">About us</a></li>
+                </ul>
+            </nav>
+        </div>
         <br>
         <br>
     </header>
@@ -43,8 +54,15 @@
                         required>
                     <br>
                     <br> -->
+                    <br>
+                    <br>
+                    <label for="img">please insert an image </label>
 
-                    <input type="submit" value="submit" onclick='getText()' >
+                    <!-- https://www.codegrepper.com/code-examples/html/accept+only+image+files+upload+html -->
+                    <input type="file" name="myImage" accept="image/x-png,image/gif,image/jpeg" />
+                    <br>
+                    <br>
+                    <input type="submit" value="submit" >
 
                 </fieldset>
             </form>
@@ -54,8 +72,31 @@
 
     </main>
     <footer>
+        <div class="nav-container">
+            <img src="img/logo.png" alt="logo img">
+            <nav class="main-nav">
+                <ul class="list">
+                    <li class="list-item"><a href="index.html">Home</a></li>
+                    <li class="list-item"><a href="pages/book_flight.html">Book Flight</a></li>
+                    <li class="list-item"><a href="pages/reservations.html">Reservations</a></li>
+                    <li class="list-item"><a href="pages/story.html">Story</a></li>
+                    <li class="list-item"><a href="pages/about_us.html">About us</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="contact">
+            <a class="contact__email" href="#">sinbad.travil@example.com</a>
+            <a class="contact__phone" href="#">0999999</a>
+            <a class="contact__location" href="#">Seattle, WA, US</a>
+        </div>
+
+        <p class="copy">Sinbad &copy; 2021 - All Rights Reserved.<br>
+            Proudly Published With ASAC Team.</p>
     </footer>
     <script src="script.js"></script>
 </body>
 
 </html>
+
+<!-- onclick='getText()' -->
