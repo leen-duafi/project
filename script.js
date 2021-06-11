@@ -8,6 +8,7 @@ function review(name, place) {
 
     this.name = name;
     this.place = place;
+    this.img;
     this.description = description
     reviews.push(this);
 
@@ -19,7 +20,7 @@ function getText() {
 
     // https://www.encodedna.com/javascript/how-to-get-all-textarea-in-a-form-using-javascript.htm
     let text = document.getElementsByTagName("textarea");
-
+console.log(typeof text);
     for (let i = 0; i <= text.length - 1; i++) {
         if (text[i].value != '') {
             console.log(text[i].value);
@@ -37,18 +38,22 @@ function getText() {
 
 // review.prototype.render = function () {
 
-//     let parent = document.getElementById("reveiewShowSection");
-//     let figureElement = document.createElement('figure')
-//     parent.appendChild('figureElement');
+//     let parent1 = document.querySelector(".reveiewShowSection");
+//     let figureElement = document.createElement("figure");
+//     console.log(figureElement);
+//     parent1.appendChild(figureElement);
 //     // let imgElement=document.createElement('img')
 //     // figureElement.appendChild('imgElement')
 //     // // imgElement.textContent=;
 //     let figCaption=document.createElement('figcaption');
 //     figureElement.append('figCaption')
+//     this.img=document.getElementById("myImage").src;
+// console.log(this.img);
 //     figCaption.textContent=addNewReview;
 
 
 // }
+
 
 ////////////////function for the event 
 
@@ -63,7 +68,7 @@ function submitting(event) {
     let name = event.target.name.value;
     let place = event.target.place.value
     let addNewReview = new review(name, place)
-    // addNewReview.render();
+     addNewReview.render();
     console.log(addNewReview);
 
 }
