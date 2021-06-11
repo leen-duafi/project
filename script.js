@@ -1,3 +1,7 @@
+// $(':radio').change(function() {
+//     console.log('New star rating: ' + this.value);
+//   });
+
 let reviews = [];
 
 function review(name, place) {
@@ -31,11 +35,20 @@ function getText() {
 
 // //////////function for format to appear
 
-review.prototype.render = function () {
+// review.prototype.render = function () {
 
-    let parent = document.getElementById("reveiewShowSection");
-    
-}
+//     let parent = document.getElementById("reveiewShowSection");
+//     let figureElement = document.createElement('figure')
+//     parent.appendChild('figureElement');
+//     // let imgElement=document.createElement('img')
+//     // figureElement.appendChild('imgElement')
+//     // // imgElement.textContent=;
+//     let figCaption=document.createElement('figcaption');
+//     figureElement.append('figCaption')
+//     figCaption.textContent=addNewReview;
+
+
+// }
 
 ////////////////function for the event 
 
@@ -50,7 +63,7 @@ function submitting(event) {
     let name = event.target.name.value;
     let place = event.target.place.value
     let addNewReview = new review(name, place)
-    addNewReview.render();
+    // addNewReview.render();
     console.log(addNewReview);
 
 }
